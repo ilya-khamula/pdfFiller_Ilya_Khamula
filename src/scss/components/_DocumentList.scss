@@ -1,0 +1,70 @@
+.doclist {
+  width: 100%;
+  max-width: 616px;
+  display: flex;
+  flex-direction: column;
+}
+
+.doclist__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-basic-colors-500;
+  padding: 16px 24px;
+  border: 1px solid $color-trolley-gray-100;
+  &:not(:last-child) {
+    border-bottom: none;
+  }
+}
+
+.doclist__name-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.doclist__icon {
+  width: 36px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.doclist__text-block {
+  width: calc(100% - 48px);
+}
+
+.doclist__name {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: $color-trolley-gray-800;
+}
+
+.doclist__edited {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-trolley-gray-600;
+}
+
+.app-mobile {
+  & .doclist .btn {
+    max-width: 100%;
+    &::before {
+      display: none;
+    }
+  }
+  & .doclist__item {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  & .doclist__name-block {
+    margin-bottom: 20px;
+  }
+}
