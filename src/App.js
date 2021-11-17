@@ -34,7 +34,6 @@ function App() {
   return (
     <div className={appClassName}>
       <DocumentList documentList={documentList}/>
-
     </div>
   );
 }
